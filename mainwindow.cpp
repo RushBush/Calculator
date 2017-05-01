@@ -29,5 +29,12 @@ void MainWindow::digit_pressed()
 {
     QPushButton * button = (QPushButton*)sender();
 
-    ui->lineEdit->setText(button->text());
+    double lineNumber;
+    QString newLine;
+
+    lineNumber = (ui->lineEdit->text() + button->text()).toDouble();
+
+    newLine = QString::number(lineNumber,'g',20);
+
+    ui->lineEdit->setText(newLine);
 }
