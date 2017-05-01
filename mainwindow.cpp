@@ -38,3 +38,8 @@ void MainWindow::digit_pressed()
 
     ui->lineEdit->setText(newLine);
 }
+
+void MainWindow::on_pushButton_point_released()
+{
+    ui->lineEdit->setText(ui->lineEdit->text()+ ".");
+}
