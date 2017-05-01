@@ -170,7 +170,7 @@
      <string>.</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_div">
+   <widget class="QPushButton" name="pushButton_divide">
     <property name="geometry">
      <rect>
       <x>220</x>

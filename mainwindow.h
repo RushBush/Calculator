@@ -19,7 +19,11 @@ private:
     Ui::MainWindow *ui;
 private slots:
     void digit_pressed();
+
     void on_pushButton_point_released();
+    void on_pushButton_clear_released();
+    void on_pushButton_equals_released();
+    void binary_operation_pressed();
 };
 
 #endif // MAINWINDOW_H
