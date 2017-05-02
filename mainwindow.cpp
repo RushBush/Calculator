@@ -27,12 +27,14 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_multiply,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_divide,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_power,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
+    connect(ui->pushButton_square,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
 
     ui->pushButton_add->setCheckable(true);
     ui->pushButton_substract->setCheckable(true);
     ui->pushButton_multiply->setCheckable(true);
     ui->pushButton_divide->setCheckable(true);
     ui->pushButton_power->setCheckable(true);
+    ui->pushButton_square->setCheckable(true);
 }
 
 MainWindow::~MainWindow()
@@ -135,6 +137,13 @@ void MainWindow::on_pushButton_equals_released()
         newline = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newline);
         ui->pushButton_power->setChecked(false);
+
+    }
+    else if (ui->pushButton_square->isChecked())
+    {
+        firstNum = ui->lineEdit->text().toDouble();
+        ui->lineEdit->setText(QString::number(sqrt(firstNum)));
+        ui->pushButton_square->setChecked(false);
 
     }
 

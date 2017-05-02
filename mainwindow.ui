@@ -235,7 +235,7 @@
      <string>x^y</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_sqrt">
+   <widget class="QPushButton" name="pushButton_square">
     <property name="geometry">
      <rect>
       <x>290</x>
