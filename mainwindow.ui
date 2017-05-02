@@ -222,7 +222,7 @@
      <string>+</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_17">
+   <widget class="QPushButton" name="pushButton_power">
     <property name="geometry">
      <rect>
       <x>290</x>

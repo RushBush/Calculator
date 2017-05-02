@@ -26,11 +26,13 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_substract,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_multiply,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_divide,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
+    connect(ui->pushButton_power,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
 
     ui->pushButton_add->setCheckable(true);
     ui->pushButton_substract->setCheckable(true);
     ui->pushButton_multiply->setCheckable(true);
     ui->pushButton_divide->setCheckable(true);
+    ui->pushButton_power->setCheckable(true);
 }
 
 MainWindow::~MainWindow()
@@ -46,7 +48,7 @@ void MainWindow::digit_pressed()
     QString newLine;
 
     if ((ui->pushButton_add->isChecked() || ui->pushButton_substract->isChecked() ||
-            ui->pushButton_multiply->isChecked() || ui->pushButton_divide->isChecked()) && (!userIsTypingSecondNumber))
+            ui->pushButton_multiply->isChecked() || ui->pushButton_power->isChecked() || ui->pushButton_divide->isChecked()) && (!userIsTypingSecondNumber))
     {
         lineNumber = button->text().toDouble();
         userIsTypingSecondNumber = true;
@@ -80,6 +82,7 @@ void MainWindow::on_pushButton_clear_released()
     ui->pushButton_substract->setChecked(false);
     ui->pushButton_multiply->setChecked(false);
     ui->pushButton_divide->setChecked(false);
+    ui->pushButton_power->setChecked(false);
 
     userIsTypingSecondNumber = false;
 
@@ -124,6 +127,14 @@ void MainWindow::on_pushButton_equals_released()
         newline = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newline);
         ui->pushButton_divide->setChecked(false);
+
+    }
+    else if (ui->pushButton_power->isChecked())
+    {
+        lineNumber = pow(firstNum, secondNum);
+        newline = QString::number(lineNumber,'g',15);
+        ui->lineEdit->setText(newline);
+        ui->pushButton_power->setChecked(false);
 
     }
 
