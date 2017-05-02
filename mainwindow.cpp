@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_divide,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_power,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_square,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
+    connect(ui->pushButton_sin,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
 
     ui->pushButton_add->setCheckable(true);
     ui->pushButton_substract->setCheckable(true);
@@ -35,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_divide->setCheckable(true);
     ui->pushButton_power->setCheckable(true);
     ui->pushButton_square->setCheckable(true);
+    ui->pushButton_sin->setCheckable(true);
 }
 
 MainWindow::~MainWindow()
@@ -144,6 +146,13 @@ void MainWindow::on_pushButton_equals_released()
         firstNum = ui->lineEdit->text().toDouble();
         ui->lineEdit->setText(QString::number(sqrt(firstNum)));
         ui->pushButton_square->setChecked(false);
+
+    }
+    else if (ui->pushButton_sin->isChecked())
+    {
+        firstNum = ui->lineEdit->text().toDouble();
+        ui->lineEdit->setText(QString::number(sin(firstNum)));
+        ui->pushButton_sin->setChecked(false);
 
     }
 
