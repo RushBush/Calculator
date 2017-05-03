@@ -22,6 +22,7 @@ private slots:
 
     void on_pushButton_point_released();
     void on_pushButton_clear_released();
+    void on_pushButton_27_released();
     void on_pushButton_equals_released();
     void binary_operation_pressed();
 };

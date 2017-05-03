@@ -103,6 +103,19 @@ void MainWindow::on_pushButton_clear_released()
     ui->lineEdit->setText("0");
 }
 
+void MainWindow::on_pushButton_27_released()
+{
+    ui->pushButton_add->setChecked(false);
+    ui->pushButton_substract->setChecked(false);
+    ui->pushButton_multiply->setChecked(false);
+    ui->pushButton_divide->setChecked(false);
+    ui->pushButton_power->setChecked(false);
+
+    userIsTypingSecondNumber = false;
+    QString text = ui->lineEdit->text();
+    text.chop(1);
+    ui->lineEdit->setText(text);
+}
 void MainWindow::on_pushButton_equals_released()
 {
     double lineNumber, secondNum;
