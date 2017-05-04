@@ -37,6 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_tg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_ctg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_pi,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
+    connect(ui->pushButton_exp,SIGNAL(released()),this,SLOT(exponential_function()));
 
     ui->pushButton_add->setCheckable(true);
     ui->pushButton_substract->setCheckable(true);
@@ -260,6 +261,21 @@ void MainWindow::unary_operation_pressed()
     {
         lineNumber = ui->lineEdit->text().toDouble();
         lineNumber = lineNumber * 0.01;
+        newLine = QString::number(lineNumber,'g',15);
+        ui->lineEdit->setText(newLine);
+    }
+}
+void MainWindow::exponential_function()
+{
+    QPushButton * button = (QPushButton*) sender();
+    double lineNumber;
+    QString newLine;
+    double e = 2.718281828459045;
+
+    if (button->text() == "e")
+    {
+        firstNum = ui->lineEdit->text().toDouble();
+        lineNumber = firstNum * e;
         newLine = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newLine);
     }

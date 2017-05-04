@@ -456,7 +456,7 @@
      <string> π</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_12">
+   <widget class="QPushButton" name="pushButton_exp">
     <property name="geometry">
      <rect>
       <x>370</x>

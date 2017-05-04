@@ -26,7 +26,8 @@ private slots:
     void on_pushButton_equals_released();
     void binary_operation_pressed();
     void unary_operation_pressed();
-    void on_pushButton_pi_clicked();
+    void exponential_function();
+
 };
 
 #endif // MAINWINDOW_H
