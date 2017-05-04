@@ -38,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_ctg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_pi,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_exp,SIGNAL(released()),this,SLOT(exponential_function()));
+    connect(ui->pushButton_fact,SIGNAL(released()),this,SLOT(factorial_function()));
 
     ui->pushButton_add->setCheckable(true);
     ui->pushButton_substract->setCheckable(true);
@@ -59,6 +60,13 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+int factorial(int n)
+{
+    if(n == 0)
+    return 1;
+    else return n * factorial(n - 1);
 }
 
 void MainWindow::digit_pressed()
@@ -276,6 +284,21 @@ void MainWindow::exponential_function()
     {
         firstNum = ui->lineEdit->text().toDouble();
         lineNumber = firstNum * e;
+        newLine = QString::number(lineNumber,'g',15);
+        ui->lineEdit->setText(newLine);
+    }
+}
+
+void MainWindow::factorial_function()
+{
+    QPushButton * button = (QPushButton*) sender();
+    double lineNumber;
+    QString newLine;
+
+    if (button->text() == "!")
+    {
+        firstNum = ui->lineEdit->text().toDouble();
+        lineNumber = factorial(firstNum);
         newLine = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newLine);
     }

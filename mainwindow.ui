@@ -430,7 +430,7 @@
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_10">
+   <widget class="QPushButton" name="pushButton_fact">
     <property name="geometry">
      <rect>
       <x>370</x>
