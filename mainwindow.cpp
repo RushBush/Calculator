@@ -3,6 +3,7 @@
 #include <math.h>
 
 double firstNum;
+double pi = 3.141592653589793;
 bool userIsTypingSecondNumber = false;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -35,8 +36,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_lg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_tg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_ctg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
-
-    connect(ui->pushButton_percent,SIGNAL(released()),this,SLOT(unary_operation_pressed()));
+    connect(ui->pushButton_pi,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
 
     ui->pushButton_add->setCheckable(true);
     ui->pushButton_substract->setCheckable(true);
@@ -50,6 +50,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_lg->setCheckable(true);
     ui->pushButton_tg->setCheckable(true);
     ui->pushButton_ctg->setCheckable(true);
+    ui->pushButton_pi->setCheckable(true);
+
+    connect(ui->pushButton_percent,SIGNAL(released()),this,SLOT(unary_operation_pressed()));
 }
 
 MainWindow::~MainWindow()
@@ -215,6 +218,24 @@ void MainWindow::on_pushButton_equals_released()
         ui->lineEdit->setText(QString::number(atan(firstNum)));
         ui->pushButton_ctg->setChecked(false);
 
+    }
+    else if (ui->pushButton_pi->isChecked())
+    {
+        if(firstNum == 0)
+        {
+            firstNum=pi;
+            newline = QString::number(firstNum,'g',15);
+            ui->lineEdit->setText(newline);
+            ui->pushButton_pi->setChecked(false);
+        }
+         else
+            {
+        firstNum = ui->lineEdit->text().toDouble();
+        lineNumber = firstNum * pi;
+        newline = QString::number(lineNumber,'g',15);
+        ui->lineEdit->setText(newline);
+        ui->pushButton_pi->setChecked(false);
+    }
     }
 
     userIsTypingSecondNumber = false;

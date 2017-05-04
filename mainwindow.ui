@@ -443,7 +443,7 @@
      <string>!</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_11">
+   <widget class="QPushButton" name="pushButton_pi">
     <property name="geometry">
      <rect>
       <x>370</x>
