@@ -453,7 +453,7 @@
      </rect>
     </property>
     <property name="text">
-     <string> π</string>
+     <string> p</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_exp">
