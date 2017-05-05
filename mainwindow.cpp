@@ -113,14 +113,6 @@ void MainWindow::on_pushButton_clear_released()
     ui->pushButton_multiply->setChecked(false);
     ui->pushButton_divide->setChecked(false);
     ui->pushButton_power->setChecked(false);
-    ui->pushButton_square->setCheckable(false);
-    ui->pushButton_sin->setCheckable(false);
-    ui->pushButton_cos->setCheckable(false);
-    ui->pushButton_ln->setCheckable(false);
-    ui->pushButton_lg->setCheckable(false);
-    ui->pushButton_tg->setCheckable(false);
-    ui->pushButton_ctg->setCheckable(false);
-
     userIsTypingSecondNumber = false;
 
     ui->lineEdit->setText("0");
