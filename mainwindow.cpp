@@ -168,7 +168,6 @@ void MainWindow::on_pushButton_equals_released()
         lineNumber = firstNum / secondNum;
         newline = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newline);
-        ui->pushButton_divide->setChecked(false);
 
     }
     else if (ui->pushButton_power->isChecked())
@@ -280,12 +279,20 @@ void MainWindow::exponential_function()
     QString newLine;
     double e = 2.718281828459045;
 
-    if (button->text() == "e")
+    if(firstNum == ui->pushButton_exp->isChecked())
+        {
+            lineNumber = e;
+            newLine = QString::number(lineNumber,'g',15);
+            ui->lineEdit->setText(newLine);
+
+        }
+    else if (button->text() == "e")
     {
         firstNum = ui->lineEdit->text().toDouble();
-        lineNumber = firstNum * e;
+        lineNumber = e * firstNum;
         newLine = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newLine);
+
     }
 }
 
