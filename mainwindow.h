@@ -28,6 +28,7 @@ private slots:
     void unary_operation_pressed();
     void exponential_function();
     void factorial_function();
+    void pi_function();
 
 };
 

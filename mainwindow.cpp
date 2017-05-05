@@ -3,7 +3,7 @@
 #include <math.h>
 
 double firstNum;
-double pi = 3.141592653589793;
+//double pi = 3.141592653589793;
 bool userIsTypingSecondNumber = false;
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -36,7 +36,8 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->pushButton_lg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_tg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
     connect(ui->pushButton_ctg,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
-    connect(ui->pushButton_pi,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
+    //connect(ui->pushButton_pi,SIGNAL(released()),this,SLOT(binary_operation_pressed()));
+    connect(ui->pushButton_pi,SIGNAL(released()),this,SLOT(pi_function()));
     connect(ui->pushButton_exp,SIGNAL(released()),this,SLOT(exponential_function()));
     connect(ui->pushButton_fact,SIGNAL(released()),this,SLOT(factorial_function()));
 
@@ -52,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_lg->setCheckable(true);
     ui->pushButton_tg->setCheckable(true);
     ui->pushButton_ctg->setCheckable(true);
-    ui->pushButton_pi->setCheckable(true);
+    //ui->pushButton_pi->setCheckable(true);
 
     connect(ui->pushButton_percent,SIGNAL(released()),this,SLOT(unary_operation_pressed()));
 }
@@ -64,7 +65,7 @@ MainWindow::~MainWindow()
 
 int factorial(int n)
 {
-    if(n == 0)
+    if(n == 0 || n == 1)
     return 1;
     else return n * factorial(n - 1);
 }
@@ -112,6 +113,13 @@ void MainWindow::on_pushButton_clear_released()
     ui->pushButton_multiply->setChecked(false);
     ui->pushButton_divide->setChecked(false);
     ui->pushButton_power->setChecked(false);
+    ui->pushButton_square->setCheckable(false);
+    ui->pushButton_sin->setCheckable(false);
+    ui->pushButton_cos->setCheckable(false);
+    ui->pushButton_ln->setCheckable(false);
+    ui->pushButton_lg->setCheckable(false);
+    ui->pushButton_tg->setCheckable(false);
+    ui->pushButton_ctg->setCheckable(false);
 
     userIsTypingSecondNumber = false;
 
@@ -227,11 +235,11 @@ void MainWindow::on_pushButton_equals_released()
         ui->pushButton_ctg->setChecked(false);
 
     }
-    else if (ui->pushButton_pi->isChecked())
+   /* else if (ui->pushButton_pi->isChecked())
     {
         if(firstNum == 0)
         {
-            firstNum=pi;
+            firstNum= pi;
             newline = QString::number(firstNum,'g',15);
             ui->lineEdit->setText(newline);
             ui->pushButton_pi->setChecked(false);
@@ -239,12 +247,12 @@ void MainWindow::on_pushButton_equals_released()
          else
             {
         firstNum = ui->lineEdit->text().toDouble();
-        lineNumber = firstNum * pi;
+        lineNumber = pi;
         newline = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newline);
         ui->pushButton_pi->setChecked(false);
     }
-    }
+    }*/
 
     userIsTypingSecondNumber = false;
 }
@@ -272,6 +280,32 @@ void MainWindow::unary_operation_pressed()
         ui->lineEdit->setText(newLine);
     }
 }
+
+void MainWindow::pi_function()
+{
+    QPushButton * button = (QPushButton*) sender();
+    double lineNumber;
+    QString newLine;
+    double pi = 3.141592653589793;
+
+    if(firstNum == ui->pushButton_pi->isChecked())
+        {
+            lineNumber = pi;
+            newLine = QString::number(lineNumber,'g',15);
+            ui->lineEdit->setText(newLine);
+
+        }
+   else
+        if (button->text() == "pi")
+    {
+        firstNum = ui->lineEdit->text().toDouble();
+        lineNumber = pi ;
+        newLine = QString::number(lineNumber,'g',15);
+        ui->lineEdit->setText(newLine);
+
+    }
+}
+
 void MainWindow::exponential_function()
 {
     QPushButton * button = (QPushButton*) sender();
@@ -286,10 +320,11 @@ void MainWindow::exponential_function()
             ui->lineEdit->setText(newLine);
 
         }
-    else if (button->text() == "e")
+   else
+        if (button->text() == "e")
     {
         firstNum = ui->lineEdit->text().toDouble();
-        lineNumber = e * firstNum;
+        lineNumber = e ;
         newLine = QString::number(lineNumber,'g',15);
         ui->lineEdit->setText(newLine);
 
