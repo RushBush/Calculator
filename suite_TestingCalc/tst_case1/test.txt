@@ -1,0 +1,3 @@
+Perfomance test:
+	Pass:3
+	Fail:0
