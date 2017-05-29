@@ -1,5 +1,6 @@
 :MainWindow.centralWidget_QWidget	{name='centralWidget' type='QWidget' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.lineEdit_QLineEdit	{name='lineEdit' type='QLineEdit' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_0_QPushButton	{name='pushButton_0' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_1_QPushButton	{name='pushButton_1' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_27_QPushButton	{name='pushButton_27' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_2_QPushButton	{name='pushButton_2' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
@@ -12,14 +13,21 @@
 :MainWindow.pushButton_9_QPushButton	{name='pushButton_9' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_add_QPushButton	{name='pushButton_add' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_clear_QPushButton	{name='pushButton_clear' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_cos_QPushButton	{name='pushButton_cos' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_ctg_QPushButton	{name='pushButton_ctg' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_divide_QPushButton	{name='pushButton_divide' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_equals_QPushButton	{name='pushButton_equals' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_exp_QPushButton	{name='pushButton_exp' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_fact_QPushButton	{name='pushButton_fact' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_lg_QPushButton	{name='pushButton_lg' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_ln_QPushButton	{name='pushButton_ln' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_multiply_QPushButton	{name='pushButton_multiply' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_percent_QPushButton	{name='pushButton_percent' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_pi_QPushButton	{name='pushButton_pi' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_point_QPushButton	{name='pushButton_point' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_power_QPushButton	{name='pushButton_power' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_sin_QPushButton	{name='pushButton_sin' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_square_QPushButton	{name='pushButton_square' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow.pushButton_substract_QPushButton	{name='pushButton_substract' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
+:MainWindow.pushButton_tg_QPushButton	{name='pushButton_tg' type='QPushButton' visible='1' window=':MainWindow_MainWindow'}
 :MainWindow_MainWindow	{name='MainWindow' type='MainWindow' visible='1'}

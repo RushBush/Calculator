@@ -1,0 +1,34 @@
+function main() {
+    startApplication("Calculator");
+    clickButton(waitForObject(":MainWindow.pushButton_1_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_5_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_multiply_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_pi_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_equals_QPushButton"));
+    test.compare(waitForObjectExists(":MainWindow.lineEdit_QLineEdit").text, "47.1238898038469");
+    clickButton(waitForObject(":MainWindow.pushButton_clear_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_4_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_5_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_multiply_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_exp_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_equals_QPushButton"));
+    test.compare(waitForObjectExists(":MainWindow.lineEdit_QLineEdit").text, "122.322682280657");
+    clickButton(waitForObject(":MainWindow.pushButton_clear_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_1_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_5_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_1_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_point_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_3_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_6_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_percent_QPushButton"));
+    test.compare(waitForObjectExists(":MainWindow.lineEdit_QLineEdit").text, "1.5136");
+    clickButton(waitForObject(":MainWindow.pushButton_clear_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_1_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_5_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_27_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_clear_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_6_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_fact_QPushButton"));
+    test.compare(waitForObjectExists(":MainWindow.lineEdit_QLineEdit").text, "720");
+    clickButton(waitForObject(":MainWindow.pushButton_clear_QPushButton"));
+}

@@ -32,9 +32,9 @@ function main() {
     test.compare(waitForObjectExists(":MainWindow.lineEdit_QLineEdit").text, "1.21932631112635e+17");
     clickButton(waitForObject(":MainWindow.pushButton_clear_QPushButton"));
     clickButton(waitForObject(":MainWindow.pushButton_1_QPushButton"));
-    clickButton(waitForObject(":MainWindow.pushButton_4_QPushButton"));
+    clickButton(waitForObject(":MainWindow.pushButton_1_QPushButton"));
     clickButton(waitForObject(":MainWindow.pushButton_fact_QPushButton"));
-    test.compare(waitForObjectExists(":MainWindow.lineEdit_QLineEdit").text, "1278945280");
+    test.compare(waitForObjectExists(":MainWindow.lineEdit_QLineEdit").text, "39916800");
     file.write("\tPass:" + String(test.resultCount("passes"))
         + "\n\tFail:" + String(test.resultCount("fails")));
     file.close();

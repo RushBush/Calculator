@@ -1,3 +1,0 @@
-Operators test:
-	Pass:7
-	Fail:0
